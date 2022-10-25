@@ -170,26 +170,79 @@ public class Ladrao extends ProgramaLadrao {
 				//Norte
 				if(i == 0) {
 					this.alerta = true;
-					this.direcao = 1;
+					int valor = new Random().nextInt(100) + 1;
+					if(valor < 90) {
+
+						this.direcao = 1;
+					} else if(valor >=90 && valor < 97) {
+
+						this.direcao = 4;
+					} else if(valor >=97 && valor <= 100) {
+
+						this.direcao = 3;
+					}
 				}
 				if(i == 1) {
 					this.alerta = true;
-					perseguir();
+					int valor = new Random().nextInt(100) + 1;
+					if(valor < 90) {
+
+						perseguir();
+					} else if(valor >=90 && valor < 97) {
+
+						this.direcao = 3;
+					} else if(valor >=97 && valor <= 100) {
+
+						this.direcao = 4;
+					}
+
 				}
 				if(i == 2) {
 					this.alerta = true;
-					this.direcao = 1;
+					int valor = new Random().nextInt(100) + 1;
+					if(valor < 90) {
+
+						this.direcao = 1;
+					} else if(valor >=90 && valor < 95) {
+
+						this.direcao = 4;
+					} else if(valor >=90 && valor < 100) {
+
+						this.direcao = 3;
+					}
 				}
 				
 				//Leste
 				if(i == 3) {
 					this.alerta = true;
-					perseguir();
+					int valor = new Random().nextInt(100) + 1;
+					if(valor < 90) {
+
+						perseguir();
+					} else if(valor >=90 && valor < 97) {
+
+						this.direcao = 1;
+					} else if(valor >=97 && valor <= 100) {
+
+						this.direcao = 2;
+					}
+
 				}
 				//Oeste
 				if(i == 4) {
 					this.alerta = true;
-					perseguir();
+					int valor = new Random().nextInt(100) + 1;
+					if(valor < 90) {
+
+						perseguir();
+					} else if(valor >=90 && valor < 97) {
+
+						this.direcao = 1;
+					} else if(valor >=97 && valor <= 100) {
+
+						this.direcao = 2;
+					}
+
 				}
 				//Sul
 				if(i == 5) {
@@ -198,7 +251,18 @@ public class Ladrao extends ProgramaLadrao {
 				}
 				if(i == 6) {
 					this.alerta = true;
-					perseguir();
+					int valor = new Random().nextInt(100) + 1;
+					if(valor < 90) {
+
+						perseguir();
+					} else if(valor >=90 && valor < 97) {
+
+						this.direcao = 4;
+					} else if(valor >=97 && valor <= 100) {
+
+						this.direcao = 3;
+					}
+
 				}
 				if(i == 7) {
 					this.alerta = true;
@@ -226,7 +290,6 @@ public class Ladrao extends ProgramaLadrao {
 	public int acao() {
 
 		andar();
-		System.out.println(alerta);
 		return direcao;
 
 	}
